@@ -1,14 +1,10 @@
 [build-system]
-requires = [
-    "hatchling>=1.8.1",
-]
+requires = ["hatchling>=1.8.1"]
 build-backend = "hatchling.build"
 
 [project]
 name = "wchk"
-dynamic = [
-    "version",
-]
+dynamic = ["version"]
 description = "A command line tool to check the status web pages."
 readme = "README.md"
 license = "MIT"
@@ -74,4 +70,9 @@ exclude_lines = [
     "no cov",
     "if __name__ == .__main__.:",
     "if TYPE_CHECKING:",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.github",
 ]
