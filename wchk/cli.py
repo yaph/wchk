@@ -29,7 +29,7 @@ def check(url, verbose=None):
 
 def main():
     start_time = timeit.default_timer()
-    parser = argparse.ArgumentParser(description='Check Status of Web Pages.')
+    parser = argparse.ArgumentParser(description='Check the status web pages.')
     parser.add_argument('url', type=str, nargs='?', help='Input URL to check.')
     parser.add_argument('--input-file', '-i', type=argparse.FileType('r'), default=sys.stdin,
                         help='Read URLs from a local text file.')
@@ -42,7 +42,7 @@ def main():
         for line in cli_args.input_file.readlines():
             check(line.strip(), verbose=cli_args.verbose)
 
-    cli_args.verbose and print('Script runtime: ', timeit.default_timer() - start_time)
+    cli_args.verbose and print(f'Script runtime: {timeit.default_timer() - start_time:.3f} sec', )
 
 
 if __name__ == '__main__':
