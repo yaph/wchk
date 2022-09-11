@@ -16,7 +16,13 @@ pipx install wchk
 
 ## Usage
 
+Check a web page:
+
     wchk https://example.com
+
+Show help:
+
+    wchk -h
 
 ## Development
 
